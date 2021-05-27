@@ -1,39 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive pricing component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="copy">
+        <h1 class="title">Simple, traffic-based pricing</h1>
+        <p class="copy-text">Sign-up for our 30-day trial. No credit card required.</p>
+      </div>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+      <div class="card">
+        <div class="upper-area">
+          <div class="views">
+            <p class="views-text"><span id="views"></span> Pageviews</p>
+          </div>
+          <div class="slider"></div>
+          <div class="price">
+            <p class="price-text">$<span id="price"></span>/month</p>
+          </div>
+        </div>
 
-  Pageviews
-  $ /month
+        <div class="billing-area">
+          <p class="billing-text">Monthly Billing</p>
+          <div class="toggle"></div>
+          <p class="billing-text">Yearly Billing</p>
+          <p class="discount-tag">25% <span class="discount">discount</span></p>
+        </div>
 
-  Monthly Billing
-  Yearly Billing 25% discount
+        <div class="lower-area">
+          <div class="features">
+            <ul class="features__list">
+              <li class="features__item">
+                <span class="icon-check">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+                    <path
+                      fill="none"
+                      stroke="#10D8C4"
+                      stroke-width="2"
+                      d="M1 4.134l1.907 1.908L7.949 1"
+                    />
+                  </svg> </span
+                >Unlimited websites
+              </li>
+              <li class="features__item">
+                <span class="icon-check">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+                    <path
+                      fill="none"
+                      stroke="#10D8C4"
+                      stroke-width="2"
+                      d="M1 4.134l1.907 1.908L7.949 1"
+                    />
+                  </svg> </span
+                >100% data ownership
+              </li>
+              <li class="features__item">
+                <span class="icon-check">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+                    <path
+                      fill="none"
+                      stroke="#10D8C4"
+                      stroke-width="2"
+                      d="M1 4.134l1.907 1.908L7.949 1"
+                    />
+                  </svg> </span
+                >Email reports
+              </li>
+            </ul>
+          </div>
+          <button class="btn">Start my trial</button>
+        </div>
+      </div>
 
-  Unlimited websites
-  100% data ownership
-  Email reports
+      <div class="signature-footer">
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Xavi Guasch</a>.
+        </div>
+      </div>
+    </div>
 
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <script src="./index.js"></script>
+  </body>
 </html>
