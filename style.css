@@ -1,4 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================== */
+/* Custom properties */
+/* ================== */
+
+:root {
+  --ff-main: 'Manrope', sans-serif;
+
+  --fw-semi-bold: 600;
+  --fw-extra-bold: 800;
+
+  --fs-07: 0.438rem;
+  --fs-08: 0.5em;
+  --fs-09: 0.563em;
+  --fs-10: 0.625rem;
+  --fs-12: 0.75rem;
+  --fs-13: 0.813rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.938rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-22: 1.375rem;
+  --fs-24: 1.5rem;
+  --fs-26: 1.625rem;
+  --fs-28: 1.75rem;
+  --fs-32: 2rem;
+  --fs-36: 2.25rem;
+  --fs-40: 2.5rem;
+  --fs-48: 3rem;
+  --fs-56: 3.5rem;
+  --fs-60: 3.75rem;
+  --fs-64: 4rem;
+  --fs-72: 4.5rem;
+  --fs-80: 5rem;
+
+  --clr-soft-cyan: hsl(174, 77%, 80%);
+  --clr-strong-cyan: hsl(174, 86%, 45%);
+  --clr-light-grayish-red: hsl(14, 92%, 95%);
+  --clr-light-red: hsl(15, 100%, 70%);
+  --clr-pale-blue: hsl(226, 100%, 87%);
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-very-pale-blue: hsl(230, 100%, 99%);
+  --clr-light-grayish-blue: hsl(224, 65%, 95%);
+  --clr-light-grayish-blue-2: hsl(223, 50%, 87%);
+  --clr-grayish-blue: hsl(225, 20%, 60%);
+  --clr-dark-desaturated-blue: hsl(227, 35%, 25%);
+  --clr-dark-desaturated-blue-hover: hsl(228, 18%, 28%);
+  --clr-black: hsl(0, 0%, 0%);
+}
+
+body {
+  background-color: var(--clr-white);
+  color: var(--clr-dark-desaturated-blue);
+  font-family: var(--ff-main);
+  font-size: var(--fs-15);
+  font-weight: var(--fw-extra-bold);
+  line-height: 1.625;
+  text-align: center;
+
+  background: url('./images/bg-pattern.svg') no-repeat;
+  background-position: 0% 0%;
+}
+
+/* ================== */
+/* Typography */
+/* ================== */
+.title {
+  font-size: var(--fs-20);
+}
+
+.copy-text {
+  color: var(--clr-grayish-blue);
+  font-size: var(--fs-13);
+  font-weight: var(--fw-semi-bold);
+}
+
+.views-text {
+  font-size: var(--fs-12);
+  text-transform: uppercase;
+  letter-spacing: 1.75px;
+  color: var(--clr-grayish-blue);
+}
+
+.price-text {
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-14);
+  color: var(--clr-grayish-blue);
+}
+
+.price-text #price {
+  color: var(--clr-dark-desaturated-blue);
+  font-size: var(--fs-32);
+}
+
+.billing-text {
+  font-size: var(--fs-12);
+  color: var(--clr-grayish-blue);
+  font-weight: var(--fw-semi-bold);
+}
+
+.features__item {
+  color: var(--clr-grayish-blue);
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-12);
+}
+
+/* ================== */
+/* Buttons & inputs */
+/* ================== */
+
+.btn {
+  background: var(--clr-dark-desaturated-blue);
+  border: none;
+  color: var(--clr-pale-blue);
+  cursor: pointer;
+  font-size: var(--fs-12);
+  padding: 1em 3em;
+  border-radius: 2em;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--clr-dark-desaturated-blue-hover);
+}
+
+/* ================== */
+/* Utility styles */
+/* ================== */
+
+.container {
+  margin: 0 auto;
+  padding: 0 1.25em;
+}
+
+/* ================== */
+/* SECTIONS */
+/* ================== */
+
+.copy {
+  margin-top: 3em;
+  background: url('./images/pattern-circles.svg') no-repeat;
+  background-position: 50% 0%;
+  background-size: 145px;
+  padding: 3.25em 0;
+}
+
+.copy-text {
+  width: 55%;
+  margin: 0 auto;
+}
+
+/* Card */
+.card {
+  margin-top: 0.5em;
+  background-color: var(--clr-white);
+
+  box-shadow: 10px 10px 49px -14px var(--clr-grayish-blue);
+
+  padding: 2em 1em;
+
+  border-radius: 0.5em;
+}
+
+.upper-area {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+}
+
+.slider {
+  margin-top: 1em;
+}
+
+.price {
+  margin-top: 2em;
+}
+
+.billing-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 2em;
+}
+
+.lower-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features__list {
+  list-style-type: none;
+}
+
+.features__item {
+  margin-top: 1em;
+}
+
+.icon-check {
+  margin-right: 1em;
+}
+
+.btn {
+  margin-top: 2em;
+}
+
+/* ================== */
+/* ================== */
+/* ////////////// */
 .attribution {
+  font-weight: var(--fw-semi-bold);
   font-size: 11px;
   text-align: center;
 }
