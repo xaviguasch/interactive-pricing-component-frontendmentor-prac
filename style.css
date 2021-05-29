@@ -188,7 +188,11 @@ body {
   height: 10px;
   width: 100%;
   border-radius: 1em;
-  background: linear-gradient(to right, red 50%, blue 50%);
+  background: linear-gradient(
+    to right,
+    var(--clr-soft-cyan) 50%,
+    var(--clr-light-grayish-blue) 50%
+  );
 }
 
 .range::-webkit-slider-thumb {

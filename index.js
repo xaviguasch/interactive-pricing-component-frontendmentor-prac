@@ -13,8 +13,8 @@ const valueToViews = {
 const calculateAndRender = () => {
   views.textContent = valueToViews[range.value]
 
-  const monthlyBilling = valueToViews[range.value] * 0.16
-  const yearlyBilling = parseInt(monthlyBilling - monthlyBilling * 0.25)
+  const monthlyBilling = (valueToViews[range.value] * 0.16).toFixed(2)
+  const yearlyBilling = parseFloat(monthlyBilling - monthlyBilling * 0.25).toFixed(2)
 
   if (!checkBox.checked) {
     price.textContent = monthlyBilling
@@ -45,15 +45,15 @@ const fillTheBar = (val) => {
       percentage = 100
       break
   }
-  console.log(percentage)
+
   range.style.background = `linear-gradient(
     to right,
-    red ${percentage}%,
-    blue ${100 - percentage}%
+    var(--clr-soft-cyan) ${percentage}%,
+    var(--clr-light-grayish-blue) ${percentage}%
   )`
-
-  console.log(range.style.background)
 }
+
+calculateAndRender()
 
 range.addEventListener('input', calculateAndRender)
 
