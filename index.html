@@ -20,19 +20,26 @@
       <div class="card">
         <div class="upper-area">
           <div class="views">
-            <p class="views-text"><span id="views"></span> Pageviews</p>
+            <p class="views-text"><span id="views"></span>k Pageviews</p>
           </div>
-          <div class="slider">
-            <input type="range" />
+          <div class="range-container">
+            <input type="range" min="1" max="5" value="3" id="range" class="range" />
           </div>
-          <div class="price">
-            <p class="price-text"><span id="price">$</span>/month</p>
+          <div class="price-area">
+            <p class="price-text">
+              <span id="price">16</span><span class="month">/ month</span>
+            </p>
           </div>
         </div>
 
         <div class="billing-area">
           <p class="billing-text">Monthly Billing</p>
-          <div class="toggle"></div>
+
+          <label class="switch">
+            <input type="checkbox" name="" id="" />
+            <span class="slider"></span>
+          </label>
+
           <p class="billing-text">
             Yearly Billing <span class="discount-tag">-25%</span>
           </p>
