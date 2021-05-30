@@ -17,9 +17,9 @@ const calculateAndRender = () => {
   const yearlyBilling = parseFloat(monthlyBilling - monthlyBilling * 0.25).toFixed(2)
 
   if (!checkBox.checked) {
-    price.textContent = monthlyBilling
+    price.textContent = `$${monthlyBilling}`
   } else {
-    price.textContent = yearlyBilling
+    price.textContent = `$${yearlyBilling}`
   }
 
   fillTheBar(range.value)

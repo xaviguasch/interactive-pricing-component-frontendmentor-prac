@@ -47,6 +47,7 @@
   --clr-strong-cyan: hsl(174, 86%, 45%);
   --clr-light-grayish-red: hsl(14, 92%, 95%);
   --clr-light-red: hsl(15, 100%, 70%);
+  --clr-light-red-pale: hsl(15, 90%, 95%);
   --clr-pale-blue: hsl(226, 100%, 87%);
 
   --clr-white: hsl(0, 0%, 100%);
@@ -180,7 +181,7 @@ body {
 .range-container {
   position: relative;
   width: 90%;
-  margin: 1em auto 0;
+  margin: 2em auto 0;
 }
 
 .range {
@@ -221,6 +222,7 @@ body {
   align-items: center;
   gap: 1em;
 
+  margin-top: 2em;
   margin-bottom: 2em;
 }
 
@@ -262,6 +264,19 @@ body {
   transform: translateX(18px);
 }
 
+.discount-tag {
+  background: var(--clr-light-red-pale);
+  color: var(--clr-light-red);
+  padding: 0.25em 0.5em;
+  border-radius: 1em;
+  font-size: var(--fs-10);
+  margin-left: 0.5em;
+}
+
+.discount-text {
+  display: none;
+}
+
 .lower-area {
   display: flex;
   flex-direction: column;
@@ -289,12 +304,13 @@ body {
 }
 
 .btn {
-  margin-top: 2em;
+  margin-top: 3em;
 }
 
-/* ================== */
-/* ================== */
-/* ////////////// */
+.signature-footer {
+  margin-top: 1em;
+}
+
 .attribution {
   font-weight: var(--fw-semi-bold);
   font-size: 11px;
